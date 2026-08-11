@@ -1,0 +1,1 @@
+A website that creates recruiting pages for high school softball players, all they have to do is input their stats, film, academics, schedule, etc and a page is created with a link that can be sent to college coaches.
