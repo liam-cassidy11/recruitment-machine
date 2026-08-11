@@ -5,8 +5,8 @@ import Footer from "./components/footer";
 import Landing from "./pages/landing";
 import Login from "./pages/login";
 import Signup from "./pages/signup";
-import ForgotPassword from "./pages/ForgotPassword";
-import ResetPassword from "./pages/ResetPassword";
+import ForgotPassword from "./pages/Forgotpassword";
+import ResetPassword from "./pages/Resetpassword";
 import Dashboard from "./pages/dashboard";
 import AthleteProfile from "./pages/profile";
 import Onboarding from "./components/onboarding/onboarding"; // from onboarding folder
