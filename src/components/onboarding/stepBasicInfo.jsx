@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../../lib/supabaseClient";
 
-const POSITIONS = ["Pitcher", "Catcher", "1B", "2B", "3B", "Shortstop", "Outfield", "Utility"];
+const POSITIONS = ["P", "C", "1B", "2B", "3B", "SS", "LF", "CF", "RF", "Utility"];
 
 // Strip anything that isn't a lowercase letter, number, or hyphen,
 // so the slug is always URL-safe as the user types.
