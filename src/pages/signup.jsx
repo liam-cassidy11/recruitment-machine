@@ -11,6 +11,7 @@ function generateStarterSlug() {
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -18,6 +19,12 @@ export default function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
+
+    if (password !== confirmPassword) {
+      setError("Passwords don't match.");
+      return;
+    }
+
     setLoading(true);
 
     const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
@@ -61,6 +68,10 @@ export default function Signup() {
         <label>
           Password
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+        </label>
+        <label>
+          Confirm Password
+          <input type="password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
         </label>
         <button type="submit" className="btn btn-primary" disabled={loading}>
           {loading ? "Creating account..." : "Sign Up"}

@@ -24,7 +24,7 @@
    Reset & base
    ============================================================ */
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
+html, body { margin: 0; padding: 0; overflow-x: hidden }
 body {
   font-family: var(--font-body);
   color: var(--ink);
@@ -135,6 +135,7 @@ p { margin: 0; }
 .navbar-links a:hover { color: var(--optic); }
 
 .footer {
+
   background: var(--navy-deep);
   color: #8b93a3;
   text-align: center;
@@ -142,6 +143,18 @@ p { margin: 0; }
   font-family: var(--font-mono);
   font-size: 12px;
 }
+.footer-credit {
+  margin-top: 6px;
+  font-size: 11px;
+  opacity: 0.75;
+}
+.footer-credit a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.footer-credit a:hover { color: var(--optic); }
+
+
 
 /* ============================================================
    Landing page
@@ -537,4 +550,13 @@ section { padding: 60px 24px; max-width: 900px; margin: 0 auto; }
 .slug-prefix {
   font-family: var(--font-mono); font-size: 11px;
   white-space: nowrap;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app-main {
+  flex: 1;
 }
